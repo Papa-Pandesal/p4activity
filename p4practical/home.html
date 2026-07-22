@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob’s Tech Products - Home</title>
+  <meta name="description" content="Welcome to Jacob’s Tech Products.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<header class="bg-gray-800 text-white p-4">
+  <nav class="flex space-x-4">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="about.html" class="hover:underline">About</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+  </nav>
+</header>
+
+<section class="h-screen flex items-center justify-center bg-gray-200">
+  <h1 id="greeting" class="text-4xl font-bold"></h1>
+</section>
+
+<script>
+  window.onload = function() {
+    let greetingElement = document.getElementById("greeting");
+    if (greetingElement) {
+      let hour = new Date().getHours();
+      let greeting;
+      if (hour < 12) {
+        greeting = "Good morning!";
+      } else if (hour < 18) {
+        greeting = "Good afternoon!";
+      } else {
+        greeting = "Good evening!";
+      }
+      greetingElement.textContent = greeting;
+    }
+  };
+</script>
+
+</body>
+</html>
